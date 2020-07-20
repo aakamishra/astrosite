@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Blog
+{% endblock %}
+
+{% block main %}
+
+<div>
+    <h1>Aakash's Astronomy Blog</h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <h4>published: {{ post.published_date }}</h4>
+        <h4><a href="">{{ post.title }}</a></h4>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+{% endblock %}
